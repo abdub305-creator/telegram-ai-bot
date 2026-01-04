@@ -4,8 +4,8 @@ const { generateImage } = require("./horde");
 const styles = require("./styles");
 const state = require("./state");
 
-const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
-const OWNER_ID = process.env.OWNER_ID;
+const bot = new TelegramBot(process.env.8521806628:AAFkjKnV9F2QPnUDdbE_FTVMdSmgYwcljro, { polling: true });
+const OWNER_ID = process.env.Abdubpicbot;
 
 bot.on("message", async (msg) => {
   const chatId = msg.chat.id;
