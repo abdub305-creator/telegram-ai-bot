@@ -1,15 +1,16 @@
+
 require("dotenv").config();
 const TelegramBot = require("node-telegram-bot-api");
 const { generateImage } = require("./horde");
 const styles = require("./styles");
 const state = require("./state");
 
-const bot = new TelegramBot(process.env.8521806628:AAFkjKnV9F2QPnUDdbE_FTVMdSmgYwcljro, { polling: true });
-const OWNER_ID = process.env.Abdubpicbot;
+const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
+const OWNER_ID = process.env.OWNER_ID;
 
 bot.on("message", async (msg) => {
   const chatId = msg.chat.id;
-  if (chatId.toString() !== Abdubpicbot) return;
+  if (chatId.toString() !== OWNER_ID) return;
 
   const user = state.get(chatId);
   const [cmd, ...rest] = msg.text.split(" ");
