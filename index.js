@@ -9,7 +9,7 @@ const OWNER_ID = process.env.Abdubpicbot;
 
 bot.on("message", async (msg) => {
   const chatId = msg.chat.id;
-  if (chatId.toString() !== OWNER_ID) return;
+  if (chatId.toString() !== Abdubpicbot) return;
 
   const user = state.get(chatId);
   const [cmd, ...rest] = msg.text.split(" ");
